@@ -8,17 +8,6 @@
   --shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
-/* :root {
-  --color-bg: #F8F9FA;
-  --color-card: #ffffff;
-  --color-text: #2E2E2E;
-  --color-muted: #6B4F4F;
-  --color-primary: #A3B18A; 
-  --color-primary-dark: #79866A;
-  --shadow: 0 6px 18px rgba(0,0,0,.08);
-} */
-
-
 *{box-sizing:border-box}
 body{
   margin:0;
@@ -111,6 +100,21 @@ h1 {
   transition: 0.3s;
 }
 
+.btn {
+  font-size: 1rem;
+  padding: 0.7rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #c08a59; 
+  color: #fff;
+  font-weight: 600;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: #556b2f; 
+}
+
 
 
 .home-buttons {
@@ -132,7 +136,7 @@ h1 {
 }
 
 .home-logo {
-  height: 150px; /* podés ajustar tamaño */
+  height: 150px;
   cursor: pointer;
   transition: transform 0.3s;
 }

@@ -13,7 +13,7 @@ export default function ImageSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length);
-    }, 4000); // cambia cada 4 segundos
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 

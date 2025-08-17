@@ -1,25 +1,20 @@
-import { Link } from "react-router-dom";
+
+import { useRef } from "react";
 import ImageSlider from "../components/ImageSlider";
-import logo from "../../public/images/logo.png"; // el logo que me pases
+import ProductoCard from "../components/ProductoCard";
+import productos from "../../public/data/products.json";
 
 export default function Home() {
+  const postresRef = useRef(null);
+  const tortasRef = useRef(null);
+  const bebidasRef = useRef(null);
+
+  const scrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="container">
-    
-      <div className="home-buttons">
-        <Link to="/postres" className="btn">Postres</Link>
-        <Link to="/tortas" className="btn">Tortas</Link>
-        <Link to="/bebidas" className="btn">Bebidas</Link>
-      </div>
-
-      
-      <div className="home-logo-container">
-        <Link to="/">
-          <img src={logo} alt="Capri Logo" className="home-logo" />
-        </Link>
-      </div>
-
-      
       <section style={{ textAlign: "center", margin: "2rem 0" }}>
         <h1>Bienvenido a Capri</h1>
         <p style={{ maxWidth: "700px", margin: "1rem auto", lineHeight: "1.6" }}>
@@ -31,9 +26,46 @@ export default function Home() {
         </p>
       </section>
 
-      
       <ImageSlider />
+
+      <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginBottom: "2rem" }}>
+        <button className="btn" onClick={() => scrollTo(postresRef)}>Postres</button>
+        <button className="btn" onClick={() => scrollTo(tortasRef)}>Tortas</button>
+        <button className="btn" onClick={() => scrollTo(bebidasRef)}>Bebidas</button>
+      </div>
+
+      <div ref={postresRef}>
+        <h2>Postres</h2>
+        <div className="grid">
+          {productos.filter(p => p.categoria === "Postre").map((p) => (
+            <ProductoCard key={p._id} producto={p} />
+          ))}
+        </div>
+      </div>
+
+      {/* Sección Tortas */}
+      <div ref={tortasRef}>
+        <h2>Tortas</h2>
+        <div className="grid">
+          {productos.filter(p => p.categoria === "Torta").map((p) => (
+            <ProductoCard key={p._id} producto={p} />
+          ))}
+        </div>
+      </div>
+
+      {/* Sección Bebidas */}
+      <div ref={bebidasRef}>
+        <h2>Bebidas</h2>
+        <div className="grid">
+          {productos.filter(p => p.categoria === "Bebida").map((p) => (
+            <ProductoCard key={p._id} producto={p} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
+
+
+
 
