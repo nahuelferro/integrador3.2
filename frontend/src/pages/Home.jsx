@@ -1,43 +1,39 @@
-
+import { Link } from "react-router-dom";
 import ImageSlider from "../components/ImageSlider";
-import ProductoCard from "../components/ProductoCard";
-import { useFetchProductos } from "../hooks/useFetchProductos";
-import { useState } from "react";
-
-const categorias = ["Todos", "Postre", "Torta", "Bebida"];
+import logo from "../../public/images/logo.png"; // el logo que me pases
 
 export default function Home() {
-  const [cat, setCat] = useState("Todos");
-  const { productos, loading, error } = useFetchProductos(
-    cat === "Todos" ? undefined : cat
-  );
-
-  if (loading) return <p>Cargando productos...</p>;
-  if (error) return <p>Error al cargar productos.</p>;
-
   return (
-    <section className="section">
-      {/* Carrusel arriba */}
-      <ImageSlider />
+    <div className="container">
+    
+      <div className="home-buttons">
+        <Link to="/postres" className="btn">Postres</Link>
+        <Link to="/tortas" className="btn">Tortas</Link>
+        <Link to="/bebidas" className="btn">Bebidas</Link>
+      </div>
 
-      <h2>Catálogo</h2>
-      <div className="chips">
-        {categorias.map((c) => (
-          <button
-            key={c}
-            className="chip"
-            onClick={() => setCat(c)}
-            style={{ fontWeight: cat === c ? 800 : 500 }}
-          >
-            {c}
-          </button>
-        ))}
+      
+      <div className="home-logo-container">
+        <Link to="/">
+          <img src={logo} alt="Capri Logo" className="home-logo" />
+        </Link>
       </div>
-      <div className="grid">
-        {productos.map((p) => (
-          <ProductoCard key={p._id} producto={p} />
-        ))}
-      </div>
-    </section>
+
+      
+      <section style={{ textAlign: "center", margin: "2rem 0" }}>
+        <h1>Bienvenido a Capri</h1>
+        <p style={{ maxWidth: "700px", margin: "1rem auto", lineHeight: "1.6" }}>
+          Al entrar, te envuelve un cálido aroma a café recién molido y dulces horneados. 
+          Las paredes pintadas en tonos suaves, están adornadas con estanterías de madera llenas de tartas, galletas y panecillos. 
+          Las mesas de madera rústica, invitan a sentarse y disfrutar de un momento de tranquilidad. 
+          La iluminación suave crea un ambiente acogedor, perfecto para relajarse. 
+          Un par de plantas verdes en las ventanas añaden un toque de vida, mientras que el suave murmullo de las conversaciones y el tintineo de las tazas hacen que cada visita se sienta como en casa.
+        </p>
+      </section>
+
+      
+      <ImageSlider />
+    </div>
   );
 }
+

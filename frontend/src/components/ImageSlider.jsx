@@ -5,7 +5,6 @@ const images = [
   "/images/capri 2.jpg",
   "/images/capri 3.jpg",
   "/images/capri 4.jpg",
-  "/images/capri 5.jpg",
 ];
 
 export default function ImageSlider() {

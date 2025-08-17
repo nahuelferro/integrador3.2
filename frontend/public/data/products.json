@@ -3,7 +3,7 @@
     "_id": "p1",
     "nombre": "Capri",
     "categoria": "Postre",
-    "descripcion": "Sableé de pistachos con cheesecake de pistachos. Decorado con laja de chocolate blanco y gel de lima.",
+    "descripcion": "Sablée de pistachos con cheesecake de pistachos. Decoración con laja de chocolate blanco y gel de lima.",
     "precio": 10500,
     "imagen": "/images/postre_capri.png",
     "recomendacion": "Té verde"
@@ -12,7 +12,7 @@
     "_id": "p2",
     "nombre": "Verde Tentación",
     "categoria": "Postre",
-    "descripcion": "Sableé de vainilla, bavaroise de arándanos, cremoso de frambuesa y mousse de frutilla; glaseado de frutilla y frutos rojos.",
+    "descripcion": "Sablée de vainilla, bavaroise de arándanos, cremoso de frambuesa y mousse de frutilla. Glaseado de frutilla con frutos rojos.",
     "precio": 10000,
     "imagen": "/images/postre_verde_tentacion.png",
     "recomendacion": "Té negro"
@@ -21,25 +21,26 @@
     "_id": "p3",
     "nombre": "Pasión de Frutos Rojos",
     "categoria": "Postre",
-    "descripcion": "Capas de frutas rojas con texturas cremosas y glaseado brillante.",
-    "precio": 10000,
+    "descripcion": "Sablée de vainilla con mousse cremosa de kiwi. Decoración con chocolate blanco/verde y espiral de caramelo dorado.",
+    "precio": 9000,
     "imagen": "/images/postre_pasion_rojos.png",
-    "recomendacion": "Té negro"
+    "recomendacion": "Té de Matcha"
   },
   {
     "_id": "p4",
     "nombre": "Esencia Tropical",
     "categoria": "Postre",
-    "descripcion": "Sableé de vainilla con mousse cremosa de kiwi; laja de chocolate bicolor y espiral de caramelo dorado.",
+    "descripcion": "Sablée de vainilla con mousse tropical de kiwi. Decoración de chocolate bicolor y espiral de caramelo dorado.",
     "precio": 9000,
     "imagen": "/images/postre_esencia_tropical.png",
-    "recomendacion": "Matcha"
+    "recomendacion": "Té de Matcha"
   },
+
   {
     "_id": "t1",
     "nombre": "Dulce Pecado de Frambuesa",
     "categoria": "Torta",
-    "descripcion": "Sableé de almendras y cacao, bizcochuelo de cacao, ganache y mermelada de frambuesa; cobertura de ganache frutal.",
+    "descripcion": "Sablée de almendras y cacao, bizcochuelo de cacao, rellenos de ganache y mermelada de frambuesa. Decoración con ganache y frambuesas frescas.",
     "precio": 10500,
     "imagen": "/images/torta_pecado_frambuesa.png",
     "recomendacion": "Té negro"
@@ -48,7 +49,7 @@
     "_id": "t2",
     "nombre": "Briza de Verano",
     "categoria": "Torta",
-    "descripcion": "Sableé con ralladura de lima, biscuit de vainilla y pastelera de lima; decorada con merengue italiano y gajos de lima.",
+    "descripcion": "Sablée con ralladura de lima, biscuit de vainilla, pastelera de lima. Decorada con merengue italiano y gajos de lima.",
     "precio": 9500,
     "imagen": "/images/torta_briza_verano.png",
     "recomendacion": "Té verde"
@@ -57,11 +58,12 @@
     "_id": "t3",
     "nombre": "Aromas de Viñedo",
     "categoria": "Torta",
-    "descripcion": "Sableé de vainilla, bizcochuelo de vainilla y reducción de ciruelas al vino tinto; glaseado al vino y rodajas de ciruela.",
+    "descripcion": "Sablée de vainilla, bizcochuelo de vainilla con relleno de reducción de ciruelas al vino tinto. Glaseado de vino y rodajas de ciruela.",
     "precio": 10500,
     "imagen": "/images/torta_aromas_vinedo.png",
     "recomendacion": "Té rojo"
   },
+
   {
     "_id": "b1",
     "nombre": "Té negro",
@@ -74,20 +76,44 @@
     "_id": "b2",
     "nombre": "Té verde",
     "categoria": "Bebida",
-    "descripcion": "Infusión suave, herbal.",
+    "descripcion": "Infusión herbal, suave.",
     "precio": 2300,
     "imagen": "/images/bebida_te_verde.png"
   },
   {
     "_id": "b3",
+    "nombre": "Té blanco",
+    "categoria": "Bebida",
+    "descripcion": "Té delicado y floral.",
+    "precio": 2300,
+    "imagen": "/images/bebida_te_blanco.png"
+  },
+  {
+    "_id": "b4",
+    "nombre": "Té rojo",
+    "categoria": "Bebida",
+    "descripcion": "Té terroso y fuerte.",
+    "precio": 2300,
+    "imagen": "/images/bebida_te_rojo.png"
+  },
+  {
+    "_id": "b5",
+    "nombre": "Té azul",
+    "categoria": "Bebida",
+    "descripcion": "Té oolong, entre negro y verde.",
+    "precio": 2300,
+    "imagen": "/images/bebida_te_azul.png"
+  },
+  {
+    "_id": "b6",
     "nombre": "Matcha",
     "categoria": "Bebida",
-    "descripcion": "Té verde en polvo estilo japonés.",
+    "descripcion": "Té verde japonés en polvo.",
     "precio": 2300,
     "imagen": "/images/bebida_matcha.png"
   },
   {
-    "_id": "b4",
+    "_id": "b7",
     "nombre": "Espresso",
     "categoria": "Bebida",
     "descripcion": "Café corto y concentrado.",
@@ -95,21 +121,67 @@
     "imagen": "/images/bebida_espresso.png"
   },
   {
-    "_id": "b5",
+    "_id": "b8",
+    "nombre": "Ristretto",
+    "categoria": "Bebida",
+    "descripcion": "Versión aún más concentrada del espresso.",
+    "precio": 2400,
+    "imagen": "/images/bebida_ristretto.png"
+  },
+  {
+    "_id": "b9",
+    "nombre": "Lungo",
+    "categoria": "Bebida",
+    "descripcion": "Espresso más largo, con más agua.",
+    "precio": 2400,
+    "imagen": "/images/bebida_lungo.png"
+  },
+  {
+    "_id": "b10",
+    "nombre": "Doppio",
+    "categoria": "Bebida",
+    "descripcion": "Doble espresso.",
+    "precio": 2600,
+    "imagen": "/images/bebida_doppio.png"
+  },
+  {
+    "_id": "b11",
     "nombre": "Cappuccino",
     "categoria": "Bebida",
-    "descripcion": "Café con espuma de leche.",
+    "descripcion": "Café espresso con leche y espuma cremosa.",
     "precio": 3100,
     "imagen": "/images/bebida_cappuccino.png"
   },
   {
-    "_id": "b6",
+    "_id": "b12",
+    "nombre": "Latte",
+    "categoria": "Bebida",
+    "descripcion": "Café espresso con abundante leche vaporizada.",
+    "precio": 2900,
+    "imagen": "/images/bebida_latte.png"
+  },
+  {
+    "_id": "b13",
+    "nombre": "Americano",
+    "categoria": "Bebida",
+    "descripcion": "Espresso rebajado con agua caliente.",
+    "precio": 2300,
+    "imagen": "/images/bebida_americano.png"
+  },
+  {
+    "_id": "b14",
+    "nombre": "Long Black",
+    "categoria": "Bebida",
+    "descripcion": "Variante del americano, primero agua luego espresso.",
+    "precio": 3000,
+    "imagen": "/images/bebida_long_black.png"
+  },
+  {
+    "_id": "b15",
     "nombre": "Flat White",
     "categoria": "Bebida",
-    "descripcion": "Doble espresso con leche sedosa.",
+    "descripcion": "Doble espresso con leche microespumada.",
     "precio": 3000,
     "imagen": "/images/bebida_flat_white.png"
   }
 ]
-
-
