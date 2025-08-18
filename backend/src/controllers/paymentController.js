@@ -3,7 +3,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
 import Order from "../models/Order.js";
 import mercadopago from "mercadopago";
 
-// Inicializar MP con Access Token del .env
+
 function initMP() {
   if (!process.env.MP_ACCESS_TOKEN) {
     throw new Error("Falta MP_ACCESS_TOKEN en variables de entorno");
@@ -49,10 +49,9 @@ export const crearPreferencia = asyncHandler(async (req, res) => {
   });
 });
 
-// Webhook para notificaciones de Mercado Pago
+
 export const webhookMP = asyncHandler(async (req, res) => {
   const data = req.query || {};
   console.log("🔔 Webhook Mercado Pago:", data);
-  // Aquí podrías consultar el pago por ID y actualizar el estado del pedido
   res.sendStatus(200);
 });

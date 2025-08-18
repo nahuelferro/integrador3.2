@@ -1,27 +1,31 @@
-import { Link } from 'react-router-dom'
-import { useCarrito } from '../contexts/CarritoContext'
+import { useCarrito } from "../contexts/CarritoContext";
+import { useState } from "react";
 
-export default function ProductoCard({ producto }){
-  const { agregarProducto } = useCarrito()
+export default function ProductoCard({ producto }) {
+  const { agregarProducto } = useCarrito();
+  const [agregado, setAgregado] = useState(false);
+
+  const handleAgregar = () => {
+    agregarProducto(producto);
+    setAgregado(true);
+    setTimeout(() => setAgregado(false), 1500);
+  };
+
   return (
     <div className="card">
-      <img src={producto.imagen} alt={producto.nombre} loading="lazy" />
+      <img
+        src={producto.imagen}
+        alt={producto.nombre}
+        className="card-img"
+        loading="lazy"
+      />
       <h3>{producto.nombre}</h3>
-      <p className="muted">{producto.categoria}</p>
-      <div className="row">
-        <span className="price">${'{'}producto.precio.toLocaleString('es-AR'){'}'}</span>
-        <div className="row">
-          <button className="btn secondary">
-            <Link to={`/producto/${producto._id}`}>Detalles</Link>
-          </button>
-          <button className="btn" onClick={()=>agregarProducto(producto)}>Agregar</button>
-        </div>
-      </div>
+      <p className="muted">{producto.descripcion}</p>
+      <p><b>${producto.precio.toLocaleString("es-AR")}</b></p>
+
+      <button className={`btn ${agregado ? "success" : ""}`} onClick={handleAgregar}>
+        {agregado ? "✅ Agregado" : "Agregar al carrito"}
+      </button>
     </div>
-  )
+  );
 }
-
-
-
-
-

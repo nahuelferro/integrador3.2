@@ -18,7 +18,7 @@ export default function CarritoPage(){
     }
     try{
       const res = await enviarPedido(payload)
-      // axios devuelve .data, mock devuelve el objeto directo
+      
       const ok = res?.data?.ok ?? res?.ok ?? true
       if(ok){
         alert('Pedido enviado con éxito. ¡Gracias!')
